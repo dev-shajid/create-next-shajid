@@ -1,9 +1,9 @@
 {
   "name": "create-next-shajid",
-  "version": "1.0.3",
+  "version": "0.0.0",
   "description": "A Next JS Starter from scratch using TypeScript, Webpack, Shadcn, Tailwind",
   "bin": {
-    "create-next-shajid": "bin/cli/ts"
+    "create-next-shajid": "./bin/cli.ts"
   },
   "scripts": {
     "dev": "next dev",

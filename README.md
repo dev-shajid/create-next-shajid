@@ -1,4 +1,11 @@
 <!-- <a href="https://github.com/Skolaczk/next-starter/blob/main/README.md/"> -->
+
+# Create Next Template
+
+```bash
+npx create-next-shajid myapp
+```
+
 <img src="https://raw.githubusercontent.com/dev-shajid/create-next-shajid/main/public/readme_banner.png" alt="thubnail">
 </a>
 <p align="center">
