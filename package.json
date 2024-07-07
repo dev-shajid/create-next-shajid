@@ -1,7 +1,8 @@
 {
-  "name": "boiler-template",
-  "version": "0.1.0",
-  "private": true,
+  "name": "next-starter-shajid",
+  "version": "1.0.0",
+  "description": "A Next JS Starter from scratch using TypeScript, Webpack, Shadcn, Tailwind",
+  "bin": "./bin/cli/ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
