@@ -1,5 +1,5 @@
 <!-- <a href="https://github.com/Skolaczk/next-starter/blob/main/README.md/"> -->
-<img src="https://github.com/dev-shajid/create-next-shajid/blob/main/public/readme_banner.png" alt="thubnail">
+<img src="https://raw.githubusercontent.com/dev-shajid/create-next-shajid/main/public/readme_banner.png" alt="thubnail">
 </a>
 <p align="center">
   <a href="#-features"><strong>Features</strong></a> ·
