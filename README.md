@@ -3,7 +3,7 @@
 # Create Next Template
 
 ```bash
-npx create-next-shajid myapp
+npx create-next-start myapp
 ```
 
 <img src="https://raw.githubusercontent.com/dev-shajid/create-next-shajid/main/public/readme_banner.png" alt="thubnail">
