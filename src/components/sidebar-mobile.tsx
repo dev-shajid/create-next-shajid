@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import {
@@ -29,51 +29,56 @@ export function SidebarMobile({ className, publicRoute = false }: { className?: 
   }, [pathname])
 
   return (
-    <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
-      <SheetTrigger
-        className={cn("transition hover:opacity-30", className)}
+    <>
+      <Sheet
+        open={sheetOpen} onOpenChange={setSheetOpen}
       >
-        <Menu />
-      </SheetTrigger>
-      <SheetContent
-        side="left"
-        role="navigation"
-        className="!px-0"
-      >
-        <SheetHeader
+        <SheetTrigger
+          className={cn("transition hover:opacity-30", className)}
         >
-          <SheetTitle
-            className="pl-6"
+          <Menu />
+        </SheetTrigger>
+        <SheetContent
+          side="left"
+          role="navigation"
+          className="!px-0"
+        >
+          <SheetHeader
           >
-            <Logo />
-          </SheetTitle>
-          <Separator />
-          <SheetDescription asChild className="px-3 !mt-4">
-            <div className="space-y-8">
-              <nav className="grid items-start gap-1 text-sm font-medium lg:px-4">
-                {(publicRoute ? publicRoutesItems : protectedRoutesItems).map((menu) =>
-                  menu && (
-                    <SidebarNavItem
-                      key={menu.href}
-                      href={menu.href}
-                      onClick={() => setSheetOpen(false)}
-                    >
+            <SheetTitle
+              className="pl-6"
+            >
+              <Logo />
+            </SheetTitle>
+            <Separator />
+            <SheetDescription asChild className="px-3 !mt-4">
+              <div className="space-y-8">
+                <nav className="grid items-start gap-1 text-sm font-medium md:px-4">
+                  {(publicRoute ? publicRoutesItems : protectedRoutesItems).map((menu, i) =>
+                    menu && (
+                      <Fragment key={i}>
+                        <SidebarNavItem
+                          href={menu.href}
+                          onClick={() => setSheetOpen(false)}
+                        >
 
-                      {menu.icon && (
-                        <menu.icon
-                          size={18}
-                          aria-hidden="true"
-                        />
-                      )}
-                      {menu.name}
-                    </SidebarNavItem>
-                  ),
-                )}
-              </nav>
-            </div>
-          </SheetDescription>
-        </SheetHeader>
-      </SheetContent>
-    </Sheet>
+                          {menu.icon && (
+                            <menu.icon
+                              size={18}
+                              aria-hidden="true"
+                            />
+                          )}
+                          {menu.name}
+                        </SidebarNavItem>
+                      </Fragment>
+                    ),
+                  )}
+                </nav>
+              </div>
+            </SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+    </>
   )
 }

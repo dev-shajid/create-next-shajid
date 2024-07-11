@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { protectedRoutes } from "../../app.config"
 import { Logo } from "./logo"
 import { SidebarNavItem } from "./sidebar-nav-item"
@@ -12,22 +13,23 @@ export default function ProtectedNavComponent() {
           <Logo />
         </div>
         <div className="flex-1 mt-4">
-          <nav className="grid items-start px- gap-1 text-sm font-medium lg:px-4">
+          <nav className="grid items-start gap-1 text-sm font-medium md:px-4">
             {
               protectedNavItems.map((menu, i) => (
-                <SidebarNavItem
-                  href={menu.href}
-                  key={i}
-                >
+                <Fragment key={i}>
+                  <SidebarNavItem
+                    href={menu.href}
+                  >
 
-                  {menu.icon && (
-                    <menu.icon
-                      size={18}
-                      aria-hidden="true"
-                    />
-                  )}
-                  {menu.name}
-                </SidebarNavItem>
+                    {menu.icon && (
+                      <menu.icon
+                        size={18}
+                        aria-hidden="true"
+                      />
+                    )}
+                    {menu.name}
+                  </SidebarNavItem>
+                </Fragment>
               ))
             }
           </nav>

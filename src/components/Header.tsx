@@ -5,6 +5,7 @@ import { Button } from "./ui/button"
 import { CircleUser } from "lucide-react"
 import { SidebarMobile } from "./sidebar-mobile"
 import PublicNavComponent from "./PublicNavItems"
+import { LinkButton } from "./ui/linkButton"
 
 export default function Header({ className, publicRoute = false }: { className?: string, publicRoute?: boolean }) {
   return (
@@ -29,9 +30,9 @@ export default function Header({ className, publicRoute = false }: { className?:
       </div>
       <div className="space-x-4 ml-auto">
         <ThemeToggle />
-        <Button variant="outline" size="icon" className="rounded-md">
+        <LinkButton href='/dashboard' variant="outline" size="icon" className="rounded-md">
           <CircleUser className="h-5 w-5" />
-        </Button>
+        </LinkButton>
       </div>
     </header>
   )
