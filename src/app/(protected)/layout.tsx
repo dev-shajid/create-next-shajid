@@ -1,5 +1,4 @@
-import Header from "@/components/Header"
-import ProtectedNavComponent from "@/components/ProtectedNavItems"
+import { Header, ProtectedNavItems } from "@/components/Navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,13 +11,13 @@ export default async function ProtectedLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="flex">
-      <ProtectedNavComponent />
-      <div className="flex flex-1 min-h-screen flex-col">
-        <main className="grow">
+    <div className="flex overflow-y-hidden max-h-[100dvh]">
+      <ProtectedNavItems />
+      <div className="flex flex-1 !min-h-fit !overflow-y-auto flex-col">
           <Header />
-          {children}
-        </main>
+          <main className="bg-muted/60 p-4 flex-1">
+            {children}
+          </main>
       </div>
     </div>
   )

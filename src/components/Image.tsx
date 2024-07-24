@@ -3,12 +3,12 @@ import { cn } from "@/lib/utils"
 
 export function Image({
   src,
-  alt,
+  alt='',
   className,
   priority
 }: {
   src: string
-  alt: string
+  alt?: string
   className?: string
   priority?: boolean
 }) {

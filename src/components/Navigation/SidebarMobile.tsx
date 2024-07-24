@@ -13,14 +13,14 @@ import {
 } from "@/components/ui/sheet"
 import { Logo } from "@/components/logo"
 import { protectedRoutes, publicRoutes } from "@/../app.config"
-import { SidebarNavItem } from "./sidebar-nav-item"
-import { Separator } from "./ui/separator"
+import { SidebarNavItem } from "."
+import { Separator } from "../ui/separator"
 import { usePathname } from "next/navigation"
 
 const publicRoutesItems = [publicRoutes.pricing, publicRoutes.contact]
 const protectedRoutesItems = [...Object.keys(protectedRoutes).map(e => protectedRoutes[e])]
 
-export function SidebarMobile({ className, publicRoute = false }: { className?: string, publicRoute: boolean }) {
+export default function SidebarMobile({ className, publicRoute = false }: { className?: string, publicRoute: boolean }) {
   const pathname = usePathname()
   const [sheetOpen, setSheetOpen] = useState(false)
 
@@ -68,7 +68,7 @@ export function SidebarMobile({ className, publicRoute = false }: { className?: 
                               aria-hidden="true"
                             />
                           )}
-                          {menu.name}
+                          {menu.label}
                         </SidebarNavItem>
                       </Fragment>
                     ),

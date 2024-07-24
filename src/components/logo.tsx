@@ -1,12 +1,9 @@
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 
 export function Logo() {
   return (
     <Link
-      className={cn(
-        "flex items-center space-x-1 text-xl font-bold ",
-      )}
+      className='flex items-center gap-2 font-bold bg-accent-foreground text-muted size-12 rounded-full justify-center'
       href={'/'}
     >
       <span className="text-xl font-extrabold">NXT</span>

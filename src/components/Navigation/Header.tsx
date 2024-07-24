@@ -1,17 +1,15 @@
 import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
-import ThemeToggle from "./theme/them-change"
-import { Button } from "./ui/button"
+import ThemeToggle from "../theme/them-change"
 import { CircleUser } from "lucide-react"
-import { SidebarMobile } from "./sidebar-mobile"
-import PublicNavComponent from "./PublicNavItems"
-import { LinkButton } from "./ui/linkButton"
+import { LinkButton } from "../ui/linkButton"
+import { PublicNavItems, SidebarMobile } from "."
 
 export default function Header({ className, publicRoute = false }: { className?: string, publicRoute?: boolean }) {
   return (
     <header
       className={cn(
-        "sticky top-0 flex h-16 shrink-0 items-center justify-between border-b px-4 backdrop-blur-lg lg:px-6",
+        "sticky top-0 flex h-[--header_height] z-[1000] shrink-0 items-center justify-between border-b px-4 backdrop-blur-lg lg:px-6 bg-background/30",
         className,
       )}
     >
@@ -22,7 +20,7 @@ export default function Header({ className, publicRoute = false }: { className?:
             <>
               <Logo />
               <div className="hidden ml-6 md:flex items-center gap-4">
-                <PublicNavComponent />
+                <PublicNavItems />
               </div>
             </>
             : <></>

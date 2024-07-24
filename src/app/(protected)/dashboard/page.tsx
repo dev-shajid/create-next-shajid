@@ -1,6 +1,8 @@
-import { Title1 } from '@/components/Title'
+
 import { Metadata } from 'next';
-import React from 'react'
+import React, { Suspense } from 'react'
+import PostCards, { PostCardsLoading } from './PostCards';
+import Section from '@/components/Section';
 
 export const metadata: Metadata = {
     title: "Dashboard | Template",
@@ -8,6 +10,12 @@ export const metadata: Metadata = {
 
 export default function page() {
     return (
-        <Title1 className="text-center mt-12">Dashboard</Title1>
+        <Section>
+            <h4 className="">Dashboard</h4>
+
+            <Suspense fallback={<PostCardsLoading />}>
+                <PostCards />
+            </Suspense>
+        </Section>
     )
 }

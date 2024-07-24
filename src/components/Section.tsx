@@ -7,7 +7,7 @@ interface SectionTypes extends React.PropsWithChildren{
 
 export default function Section({ children, className }: SectionTypes): React.JSX.Element {
     return (
-        <section className={cn("container", className)}>
+        <section className={cn("container space-y-6", className)}>
             {children}
         </section>
     )

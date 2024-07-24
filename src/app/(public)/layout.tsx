@@ -1,4 +1,5 @@
-import Header from "@/components/Header"
+import { Header } from "@/components/Navigation"
+
 
 export default async function PublicLayout({
   children,
@@ -8,8 +9,8 @@ export default async function PublicLayout({
 }>) {
   return (
     <div className="flex min-h-screen flex-col">
-      <main className="grow">
-        <Header publicRoute />
+      <Header publicRoute />
+      <main className="bg-muted/60 p-4 flex-1">
         {children}
       </main>
     </div>

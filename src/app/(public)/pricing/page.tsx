@@ -1,4 +1,4 @@
-import { Title1 } from '@/components/Title'
+
 import { Metadata } from 'next';
 import React from 'react'
 
@@ -8,6 +8,6 @@ export const metadata: Metadata = {
 
 export default function page() {
     return (
-        <Title1 className="text-center mt-12">Pricing Page</Title1>
+        <h2 className="text-center mt-12">Pricing Page</h2>
     )
 }

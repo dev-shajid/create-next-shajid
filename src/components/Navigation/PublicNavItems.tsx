@@ -1,6 +1,6 @@
 
 import Link from "next/link"
-import { publicRoutes } from "../../app.config"
+import { publicRoutes } from "../../../app.config"
 
 const publicNavItems = [publicRoutes.pricing, publicRoutes.contact]
 
@@ -12,7 +12,7 @@ export default function PublicNavComponent() {
         href={item.href}
         className="hover:underline"
       >
-        {item.name}
+        {item.label}
       </Link>
     ))
   )

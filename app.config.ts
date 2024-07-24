@@ -1,4 +1,6 @@
 import {
+  Code,
+  Contact,
   DollarSign,
   Home,
   HomeIcon,
@@ -30,12 +32,12 @@ export const REDIRECT_NOT_AUTHENTICATED: string = "/"
 
 export const publicRoutes:RouteTypes = {
   contact: {
-    name: 'Contact',
-    href: "/contact",
-    icon: Mail,
+    label: 'About',
+    href: "/about",
+    icon: User,
   },
   pricing: {
-    name: 'Pricing',
+    label: 'Pricing',
     href: "/pricing",
     icon: KeyRound,
   },
@@ -43,25 +45,25 @@ export const publicRoutes:RouteTypes = {
 
 export const protectedRoutes: RouteTypes = {
   dashboard: {
-    name: 'Dashboard',
+    label: 'Dashboard',
     href: "/dashboard",
     icon: HomeIcon,
   },
-  profile: {
-    name: 'Profile',
-    href: "/profile",
-    icon: KeyRound,
+  projects: {
+    label: 'Projects',
+    href: "/projects",
+    icon: Code,
   },
-  setting: {
-    name: 'Setting',
-    href: "/setting",
-    icon: Settings,
+  contact: {
+    label: 'Contact',
+    href: "/contact",
+    icon: Contact,
   },
 }
 
 interface RouteTypes {
   [key: string]: {
-    name: string,
+    label: string,
     href: string;
     icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
   }
