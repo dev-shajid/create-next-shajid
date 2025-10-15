@@ -1,4 +1,5 @@
 import * as React from "react"
+import Link from "next/link"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -36,25 +37,31 @@ const buttonVariants = cva(
   }
 )
 
-function Button({
+function LinkButton({
   className,
   variant,
   size,
   asChild = false,
+  href,
   ...props
-}: React.ComponentProps<"button"> &
+}: (React.ComponentProps<"button"> | React.ComponentProps<"a">) &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    href?: string
   }) {
-  const Comp = asChild ? Slot : "button"
+  const classes = cn(buttonVariants({ variant, size }), className)
+  const Comp: any = asChild ? Slot : href ? Link : "button"
+
+  // When rendering Next.js Link, pass className + anchor props.
+  if (href && !asChild) {
+    return (
+      <Link data-slot="button" href={href} className={classes} {...(props as any)} />
+    )
+  }
 
   return (
-    <Comp
-      data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }), 'cursor-pointer')}
-      {...props}
-    />
+    <Comp data-slot="button" className={classes} {...(props as any)} />
   )
 }
 
-export { Button, buttonVariants }
+export { LinkButton, buttonVariants }

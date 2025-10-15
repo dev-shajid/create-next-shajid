@@ -1,76 +1,36 @@
-<!-- <a href="https://github.com/Skolaczk/next-starter/blob/main/README.md/"> -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# Create Next Template
+## Getting Started
 
-```bash
-npx create-next-start myapp
-```
-
-<img src="https://raw.githubusercontent.com/dev-shajid/create-next-shajid/main/public/readme_banner.png" alt="thubnail">
-</a>
-<p align="center">
-  <a href="#-features"><strong>Features</strong></a> ·
-  <a href="#-deployment"><strong>Deployment</strong></a> ·
-  <a href="#-contribution"><strong>Contribution</strong></a> ·
-  <a href="#%EF%B8%8F-support"><strong>Support</strong></a>
-</p>
-
-## 🎉 Features
-- 🚀 Next.js 14 (App router)
-- ⚛️ React 18
-- 📘 Typescript
-- 🎨 TailwindCSS - Class sorting, merging and linting
-- 🛠️ Shadcn/ui - Customizable UI components
-<!-- - 💵 Stripe - Payment handler -->
-<!-- - 🔒 Next-auth - Easy authentication library for Next.js (GitHub provider) -->
-<!-- - 🛡️ Prisma - ORM for node.js -->
-<!-- - 📋 React-hook-form - Manage your forms easy and efficient  -->
-<!-- - 🔍 Zod - Schema validation library -->
-<!-- - 🧪 Jest & React Testing Library - Configured for unit testing -->
-<!-- - 🎭 Playwright - Configured for e2e testing -->
-- 📈 Absolute Import & Path Alias - Import components using `@/` prefix
-<!-- - 💅 Prettier - Code formatter -->
-- 🧹 Eslint - Code linting tool
-- 🐶 Husky & Lint Staged - Run scripts on your staged files before they are committed
-- 🔹 Icons - From Lucide and React-Icons
-- 🌑 Dark mode - With next-themes
-- 🗺️ Sitemap & robots.txt - With next-sitemap
-- 📝 Commitlint - Lint your git commits
-- 🤖 Github actions - Lint your code on PR
-<!-- - ⚙️ T3-env - Manage your environment variables -->
-- 💯 Perfect Lighthouse score
-
-## 🚀 Deployment
-Easily deploy your Next.js app with <a href="https://vercel.com/">Vercel</a> by clicking the button below:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dev-shajid/create-next-shajid)
-
-## 📁 Project structure
+First, run the development server:
 
 ```bash
-.
-├── .github                         # GitHub folder
-├── public                          # Public assets folder
-└── src
-    ├── app                         # Next JS App (App Router)
-    ├── components                  # React components
-    ├── hooks                       # Custom hooks
-    ├── lib                         # Functions and utilities
-    ├── styles                      # Styles folder
-    ├── types                       # Type definitions
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🤝 Contribution
-To contribute, please follow these steps:
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes, and commit them.
-4. Push your changes to the forked repository.
-5. Create a pull request.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## ❤️ Support
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-If you liked the project, I will appreciate if you leave a star. 🌟😊
+## Learn More
 
-Developed by <a href="https://dev-shajid.vercel.app/">Shajid</a> 
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
